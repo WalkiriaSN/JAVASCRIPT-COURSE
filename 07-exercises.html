@@ -53,6 +53,30 @@
 
     console.log(convertTemperature(45, 'C'));
     console.log(convertTemperature(80, 'F'));
+
+
+    //7G-I - convert (from) miles/km (to) km/miles and display result with km or miles next to it / add 'ft', add invalid return for lbs
+    function convertLength(length, from, to) {
+      if (from === 'km' && to === 'miles') {
+        return `${length / 1.6} miles`;
+      } else if (from === 'miles' && to === 'km') {
+        return `${length * 1.6} km`;
+
+      } else if (from === 'miles' && to === 'ft') {
+        return `${length * 5280} ft`;
+      } else if (from === 'km' && to === 'ft') {
+        return `${length * 3280.84} ft`;
+      } else if (from !== 'km' && from !== 'miles' && from !== 'ft') {
+        return `invalid unit: ${from}`;
+      }
+    }
+
+    console.log(convertLength(50, 'miles', 'km'));
+    console.log(convertLength(32, 'km', 'miles'));
+    console.log(convertLength(50, 'km', 'km'));
+    console.log(convertLength(50, 'km', 'ft'));
+    console.log(convertLength(50, 'miles', 'ft'));
+    console.log(convertLength(50, 'lbs', 'lbs')); 
   </script>
 </body>
 
