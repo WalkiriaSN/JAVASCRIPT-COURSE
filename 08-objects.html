@@ -42,6 +42,7 @@
         console.log('function inside object')
       }
     };
+
     console.log(product2);
     //dot notation used by default
     console.log(product2.name);
@@ -59,7 +60,52 @@
 
     const jsonString = JSON.stringify(product2)
     console.log(JSON.parse(jsonString));
-    
+
+    //Auto-Boxing - 
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    //copy by reference
+    const object1 = {
+      message: 'hello'
+    };
+    const object2 = object1;
+    // even though const is used, object inside can be changed
+    object1.message = 'good job';
+    console.log(object1);
+    console.log(object2);
+
+    const object3 = {
+      message: 'good job'
+    };
+    //when comparing, your comparing reference, not object inside
+    console.log(object3 === object1);
+    console.log(object2 === object1);
+
+
+    const object4 = {
+      message: 'good job',
+      price: 799
+    };
+    //const message = object4.message;
+    const { message, price } = object4;
+    console.log(message);
+    console.log(price);
+
+    const object5 = {
+      //message: message
+      message,//short hand property shortcut    
+      // //short-hand method shortcut
+      // method: function function1() {
+      //   console.log('method');
+      // }
+      method() {
+        console.log('method');
+      }
+    };
+    console.log(object5);
+    object5.method();
+
   </script>
 </body>
 
