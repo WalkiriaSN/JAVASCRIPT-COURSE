@@ -1,0 +1,162 @@
+<html>
+<head>
+<title> Review Practice
+</title>
+<style>
+body {
+background-color:;
+}
+</style>
+</head>
+
+<body>
+<button class="scissor-btn game-btn" onclick="playRound('rock');"><img src="" width="100px"></button>
+<div id="view"></div>
+
+
+<script>
+
+function convertToFarenheit(temp) {
+
+const celcius = 37.78
+const farenheit = (celcius * 9/5) + 32;
+
+
+
+return celcius;
+
+}
+console.log(convertToFarenheit);
+
+
+function calculateTax(cost, tax) {
+console.log(cost * tax);
+}
+
+calculateTax(2000, 0.2);
+
+
+var oldVar = "this is old!";
+console.log('oldVar');
+
+let modernVar = "this is modern!";
+//document.getElementById('view');
+//document.write('modernVar');
+
+let num = 33 ;
+let str = 'hello';
+let bool = true;
+let arr = [1, 2, 3];
+let obj = {fruit: "orange"};
+
+console.log(typeof num, typeof str, typeof bool, typeof arr, typeof obj);
+
+
+let name2 = "Alice";
+console.log(`hello, my name is ${name2.toUpperCase()}`);
+console.log(name2.replace("A", "O"));
+console.log(name2.split("c"));
+console.log(name2.split(""));
+
+//Conditionals
+
+let num2 = 20;
+if (num2 > 20) {
+console.log("greater than 20");
+
+} else if (num2 === 20) {
+console.log("exactly 20");
+
+} else {
+console.log("less than 20");
+}
+
+//ternary operator over IF statement
+
+let age2 = 18;
+let canVote = age2 >= 18 ? "Yes" : "No";
+console.log(canVote);
+
+//loops
+
+for (let i = 0; i < 5; i++) {
+console.log(`for loop iteration: ${i}`);
+}
+
+let j = 0;
+while (j < 5) {
+console.log(`while loop iteration: ${j}`);
+j++;
+}
+[1, 2, 3, 6].forEach(num => console.log(`ForEach: ${num}`));
+
+
+//functions
+
+function add(a, b) {
+return a + b;
+
+}
+
+const subtract = function(a, b) {
+return a - b;
+};
+
+const multiply = (a, b) => a * b;
+
+
+
+
+//array methods 
+
+let numbers = [1, 2, 3, 4, 5];
+
+let doubled = numbers.map(num => num * 2);
+console.log(doubled);
+
+
+//dividing by 2 to check for remainders, if number is even or odd and filter and return even numbers
+
+let evens = numbers.filter(num => num % 2 === 0);
+console.log(evens);
+
+
+//Reduce uses 2 arguments reduce(callback, initialValue) over elements in array to return value
+
+let sum = numbers.reduce((acc, num) => acc + num, 0);
+console.log(sum);
+
+let max = numbers.reduce((maxValue, num) => Math.max (maxValue, num), -Infinity);
+console.log(max);
+
+
+//object Destructuring, extract values from objects
+
+const user = {name: "Bob", age: 25};
+const {name, age} = user;
+//console.log(user);
+console.log(name, age);
+
+
+//spread and rest operators
+
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5];
+//console.log(arr1);
+console.log(arr2);
+
+const sumAll = (...nums) => nums.reduce((acc, num) => acc + num, 0);
+console.log(sumAll(1, 2 ,3 ,4 ,5));
+
+
+//Promises and Async/Await
+
+// const fetchData = () => new Promise(resolve => setTimeout()) => resolve("Data fetched"), 1000));
+// fetchData().then(console.log);
+
+// async function get
+
+
+</script>
+</body>
+</html>
